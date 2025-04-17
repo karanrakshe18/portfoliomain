@@ -1,0 +1,116 @@
+@import "../../app.scss";
+
+.portfolio{
+    background:  linear-gradient(180deg, #161646, #0c0c1d);
+    position: relative;
+
+    .progress{
+        position: sticky;
+        top: 0;
+        left: 0; 
+        padding-top: 2.63vw;
+        text-align: center;
+        color: orange;
+        font-size: 1.89vw;
+
+        @include mobile {
+            padding-top: 15vw;
+            font-size: 3vw;
+        }
+
+        .progressBar{
+            height: 0.53vw;
+            background-color: white;
+
+            @include mobile {
+                height: 1.5vw; 
+            }
+        }
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        // border: 1px solid white;
+
+        .wrapper{
+            max-width: 71.78vw;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.63vw;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            .imageContainer{
+                flex: 1;
+                height: 50%;
+
+                @include mobile {
+                    width: 100%;
+                    padding-top: 30vw;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .textContainer{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                gap: 1.58vw;
+
+                @include mobile {
+                    transform: none !important;
+                    // padding: 10px;
+                    align-items: center;
+                    text-align: center;
+                    gap: 4vw;
+                }
+
+                h2{
+                    font-size: 3.78vw;
+                    @include mobile {
+                        font-size: 5vw;
+                    }
+                }
+
+                p{
+                    color: gray;
+                    font-size: 1.05vw;
+                    @include mobile {
+                        font-size: 4vw;
+                    }
+                }
+
+                button{
+                    background-color: orange;
+                    border:none;
+                    border-radius: 0.53vw;
+                    padding: 0.53vw;
+                    width: 10.51vw;
+                    cursor: pointer;
+
+                    @include mobile {
+                        padding: 2vw 4vw;
+                        width: fit-content;
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+    }
+}
